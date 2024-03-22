@@ -1,19 +1,18 @@
-const Lorem = () => {
+const Lorem = ({ head, title, body, button }) => {
   const handleClick = () => {
     window.open('https://www.verkada.com')
   }
 
   return (
     <>
-      <h3 className="lorem-head">LOREM IPSUM DOLOR</h3>
-      <h1 className="lorem-title">Lorem ipsum dolor sit amet, est mollis evertitur ut</h1>
-      <p className="lorem-body">
-        Lorem ipsum dolor sit amet, est mollis evertitur ut, clita utinam quaeque ad sed, an legere concludaturque eum. Duo omnis solet
-        dissentiet te, ea sed quis erat reprehendunt, cetero consetetur philosophia mel in.{' '}
-      </p>
-      <button className="lorem-button" onClick={handleClick}>
-        Learn More &gt;
-      </button>
+      {head && <h3 className="lorem-head">{head}</h3>}
+      {title && <h1 className="lorem-title">{title}</h1>}
+      {body && <p className="lorem-body">{body}</p>}
+      {button && (
+        <button className="lorem-button" onClick={handleClick}>
+          {button}
+        </button>
+      )}
     </>
   )
 }
