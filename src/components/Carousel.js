@@ -31,7 +31,7 @@ const Carousel = ({ items }) => {
             )
           })}
       </div>
-      <CarouselControls setActive={setActive} active={active} setIsPlaying={setIsPlaying} isPlaying={isPlaying} />
+      <CarouselControls setActive={setActive} active={active} setIsPlaying={setIsPlaying} isPlaying={isPlaying} numSlides={items.length} />
     </>
   )
 }

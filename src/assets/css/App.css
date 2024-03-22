@@ -26,9 +26,6 @@ button {
   background-color: #fff;
   border: none;
   cursor: pointer;
-  font-size: 12px;
-  line-height: 20px;
-  text-align: right;
   width: 50px;
 }
 
@@ -60,7 +57,17 @@ button {
 
 .slide-control {
   margin: 25px 0;
+  font-family: 'TT Norms Pro', 'Roboto', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
   text-align: right;
+  opacity: 0.3;
+  transition: opacity 1s ease-out;
+}
+
+.slide-control.active {
+  opacity: 1;
 }
 
 .carousel-item {
@@ -70,9 +77,11 @@ button {
 .item-0,
 .item-1,
 .item-2 {
-  transition: all 1s;
+  transition: transform 1s ease, opacity 2s ease;
   will-change: transform;
   opacity: 0.3;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .item-0.active-0 {
@@ -126,27 +135,18 @@ button {
 .timer {
   width: 3px;
   display: inline-block;
-  height: 20px;
+  height: 3px;
   border-radius: 25%;
   margin-left: 15px;
   background-color: #263640;
   vertical-align: middle;
-  will-change: transform, height;
+  transition: transform 0.5s linear, background-color 0.5s ease;
+  will-change: transform;
 }
 
-@keyframes progress-bar {
-  0% {
-    transform: height 3px;
-  }
-  50% {
-    transform: height 11px;
-  }
-  100% {
-    transform: height 20px;
-  }
-}
-
-.active {
-  animation: progress-bar 4s both;
+.active .timer {
   background-color: #ff9900;
+  transform: scaleY(5);
+  transition: transform 4s linear, background-color 0.5s ease;
+  will-change: transform;
 }
