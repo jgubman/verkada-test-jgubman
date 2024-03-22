@@ -144,7 +144,7 @@ button {
   will-change: transform;
 }
 
-.active .timer {
+.playing > .active .timer {
   background-color: #ff9900;
   transform: scaleY(5);
   transition: transform 4s linear, background-color 0.5s ease;

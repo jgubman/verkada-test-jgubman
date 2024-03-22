@@ -21,13 +21,13 @@ const CarouselControls = ({ setActive, active, isPlaying, setIsPlaying, numSlide
       e.preventDefault()
       const { value } = e.target
       setIsPlaying(false)
-      setActive(value)
+      setActive(parseInt(value))
     },
     [setIsPlaying, setActive]
   )
 
   return (
-    <div id="carousel-controls">
+    <div id="carousel-controls" className={cx({ playing: isPlaying })}>
       {numSlides &&
         [...Array(numSlides)].map((_, slideNum) => {
           const activeButton = active === slideNum

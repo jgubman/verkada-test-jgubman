@@ -13,7 +13,7 @@ const Carousel = ({ items }) => {
       }, 4000)
     }
     return () => clearInterval(timerId)
-  }, [isPlaying])
+  }, [isPlaying, active])
 
   return (
     <>
