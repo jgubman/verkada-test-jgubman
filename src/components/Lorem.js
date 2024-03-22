@@ -1,4 +1,8 @@
 const Lorem = () => {
+  const handleClick = () => {
+    window.open('https://www.verkada.com')
+  }
+
   return (
     <>
       <h3 className="lorem-head">LOREM IPSUM DOLOR</h3>
@@ -7,7 +11,9 @@ const Lorem = () => {
         Lorem ipsum dolor sit amet, est mollis evertitur ut, clita utinam quaeque ad sed, an legere concludaturque eum. Duo omnis solet
         dissentiet te, ea sed quis erat reprehendunt, cetero consetetur philosophia mel in.{' '}
       </p>
-      <button className="lorem-button">Learn More &gt;</button>
+      <button className="lorem-button" onClick={handleClick}>
+        Learn More &gt;
+      </button>
     </>
   )
 }

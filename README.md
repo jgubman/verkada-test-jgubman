@@ -11,3 +11,5 @@ I assumed you'd prefer the animation (and the countdown timer) to stop playing i
 Didn't add any tests, I would if this were production code and I wasn't time-boxing the project.
 
 In the interest of time, I just used a plain vanilla stylesheet, which I'd never do in an actual production project. Since this is just one page, there's no real advantage to breaking it up into multiple modules or imports. Also, I realized I've been taking Sass/PostCSS for granted, man I miss nested CSS.
+
+I put a little effort into the responsive sizing. At 1200px I force it to wrap and hide the carousel controls. It's a little janky and I'd prefer to spend more time on it.
