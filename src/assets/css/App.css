@@ -3,6 +3,7 @@
   width: 100vw;
   overflow: hidden;
   margin: 0;
+  font-family: 'TT Norms Pro', 'Roboto', sans-serif;
 }
 
 header {
@@ -30,9 +31,55 @@ button {
 }
 
 .cta {
+  box-sizing: border-box;
+  max-width: 450px;
   min-width: 450px;
-  background-color: red;
   flex: 1;
+  margin-left: 77px;
+}
+
+h3.lorem-head {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: left;
+  color: #929a9f;
+}
+
+h1.lorem-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 42px;
+  text-align: left;
+  color: #263640;
+}
+
+p.lorem-body {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+  color: #929a9f;
+}
+
+button.lorem-button {
+  background-color: #ff9900;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: left;
+
+  width: 161px;
+  height: 48px;
+  padding: 4px 25px 4px 25px;
+  gap: 16px;
+  border-radius: 48px;
+  opacity: 0px;
+}
+
+button.lorem-button:hover {
+  background-color: #de8500;
 }
 
 #carousel-container {
@@ -57,7 +104,6 @@ button {
 
 .slide-control {
   margin: 25px 0;
-  font-family: 'TT Norms Pro', 'Roboto', sans-serif;
   font-size: 12px;
   font-weight: 700;
   line-height: 20px;
@@ -77,9 +123,9 @@ button {
 .item-0,
 .item-1,
 .item-2 {
-  transition: transform 1s ease, opacity 2s ease;
   will-change: transform;
   opacity: 0.3;
+  transition: all 1s ease;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.6);
 }
@@ -124,6 +170,10 @@ button {
 .item-2.active-1 {
   transform: translate3d(139px, 330px, 0px);
   z-index: 99;
+}
+
+.item-1.active-0:before {
+  content: url('../../../public/images/img-03-disabled.jpg');
 }
 
 .item-2.active-2 {

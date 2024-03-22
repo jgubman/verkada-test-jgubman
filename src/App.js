@@ -1,5 +1,6 @@
 import Header from 'components/Header'
 import Carousel from 'components/Carousel'
+import Lorem from 'components/Lorem'
 import 'assets/css/App.css'
 
 function App() {
@@ -9,7 +10,9 @@ function App() {
     <>
       <Header />
       <main>
-        <section className="cta">Bonjourz</section>
+        <section className="cta">
+          <Lorem />
+        </section>
         <section id="carousel-container">
           <Carousel items={images} />
         </section>
