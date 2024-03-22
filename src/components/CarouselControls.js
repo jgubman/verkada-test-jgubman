@@ -1,4 +1,5 @@
-import { useCallback, useRef } from 'react'
+/* eslint-disable jsx-a11y/no-redundant-roles */
+import { useCallback } from 'react'
 
 import cx from 'classnames'
 
@@ -23,7 +24,7 @@ const CarouselControls = ({ setActive, active, isPlaying, setIsPlaying, numSlide
       setIsPlaying(false)
       setActive(parseInt(value))
     },
-    [setIsPlaying, setActive]
+    [setActive, setIsPlaying]
   )
 
   return (
@@ -37,6 +38,8 @@ const CarouselControls = ({ setActive, active, isPlaying, setIsPlaying, numSlide
               className={cx('slide-control', { active: activeButton })}
               value={slideNum}
               onClick={handleJump}
+              aria-label={`Jump to slide ${slideNum}`}
+              role="button"
             >
               {(slideNum + 1).toString().padStart(2, '0')}
               <span className={'timer'}></span>
