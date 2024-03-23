@@ -7,7 +7,7 @@
 
 header {
   grid-column: 1/3;
-  margin: 0 149px;
+  margin: 0 154px;
   box-sizing: border-box;
 }
 
@@ -34,7 +34,7 @@ button {
   max-width: 450px;
   min-width: 450px;
   flex: 1;
-  margin: 0 auto 0 240px;
+  margin: 0 auto 0 244px;
 }
 
 h3.lorem-head {
@@ -102,7 +102,7 @@ button.lorem-button:hover > .arrow-icon {
   display: grid;
   grid-template-columns: 2fr 50px;
   align-items: center;
-  gap: 139px;
+  gap: 156px;
   margin: 0 50px 0 0;
 }
 
@@ -112,13 +112,16 @@ button.lorem-button:hover > .arrow-icon {
   overflow: hidden;
 }
 
-@media (width <= 1448px) {
+@media (width <= 1480px) {
   .cta {
     margin: 5px;
   }
 }
 
-@media (width <= 1224px) {
+@media (width <= 1280px) {
+  .cta {
+    margin: 15px;
+  }
   main {
     justify-content: center;
   }
