@@ -46,7 +46,13 @@ const CarouselControls = ({ setActive, active, isPlaying, setIsPlaying, numSlide
             </button>
           )
         })}
-      <button key={'play-toggle-button'} className="slide-control" onClick={togglePlaying}>
+      <button
+        key={'play-toggle-button'}
+        className="slide-control"
+        onClick={togglePlaying}
+        aria-label={`${isPlaying ? 'Pause' : 'Play'} Slideshow`}
+        role="button"
+      >
         {isPlaying ? <PauseButton /> : <PlayButton />}
       </button>
     </div>

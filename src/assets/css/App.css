@@ -170,7 +170,8 @@ button.lorem-button:hover > .arrow-icon {
   opacity: 1;
 }
 
-.carousel-item {
+.carousel-item,
+.slide-overlay {
   position: absolute;
 }
 
@@ -181,61 +182,55 @@ button.lorem-button:hover > .arrow-icon {
   /* opacity: 0.3; */
   transition: all 1s ease;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .item-0.active-0 {
   transform: translate3d(0px, 60px, 0px);
   z-index: 100;
-  opacity: 1;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .item-0.active-1 {
   transform: translate3d(240px, 0px, 0px);
   z-index: 98;
-  content: url('../../../public/images/img-01-disabled.jpg');
 }
 
 .item-0.active-2 {
   transform: translate3d(175px, 150px, 0px);
   z-index: 99;
-  content: url('../../../public/images/img-01-disabled.jpg');
 }
 
 .item-1.active-0 {
   transform: translate3d(252px, 330px, 0px);
   z-index: 99;
-  content: url('../../../public/images/img-02-disabled.jpg');
 }
 
 .item-1.active-1 {
   transform: translate3d(0px, 166px, 0px);
   z-index: 100;
-  opacity: 1;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .item-1.active-2 {
   transform: translate3d(294px, 0px, 0px);
   z-index: 98;
-  content: url('../../../public/images/img-02-disabled.jpg');
 }
 
 .item-2.active-0 {
   transform: translate3d(238px, 0px, 0px);
   z-index: 98;
-  content: url('../../../public/images/img-03-disabled.jpg');
 }
 
 .item-2.active-1 {
   transform: translate3d(139px, 330px, 0px);
   z-index: 99;
-  content: url('../../../public/images/img-03-disabled.jpg');
 }
 
 .item-2.active-2 {
   transform: translate3d(0px, 81px, 0px);
   z-index: 100;
-  opacity: 1;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .timer {
@@ -246,18 +241,19 @@ button.lorem-button:hover > .arrow-icon {
   margin-left: 15px;
   background-color: #263640;
   vertical-align: middle;
-  transition: transform 0.5s linear, background-color 0.5s ease;
   will-change: transform;
+  transition: transform 0.5s linear, background-color 0.5s ease;
 }
 
 .active .timer {
   transform: scaleY(5);
   background-color: #ff9900;
+  transition: transform 0.25s linear, background-color 0.25s ease;
 }
 
 .playing > .active .timer {
   background-color: #ff9900;
   transform: scaleY(5);
-  transition: transform 4s linear, background-color 0.5s ease;
+  transition: transform 4s linear, background-color 1s ease;
   will-change: transform;
 }

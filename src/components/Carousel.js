@@ -20,14 +20,20 @@ const Carousel = ({ items }) => {
       <div id="carousel">
         {items &&
           items.map((img, idx) => {
+            const { src, width, height } = img
+            const style = { width: `${width}px`, height: `${height}px` }
             return (
-              <img
-                srcSet={`/images/${img}@2x.jpg 2x, /images/${img}@3x.jpg 3x`}
-                src={`/images/${img}.jpg`}
-                alt={idx}
-                key={idx}
-                className={`carousel-item item-${idx} active-${active}`}
-              />
+              <>
+                <img
+                  srcSet={`/images/${src}@2x.jpg 2x, /images/${src}@3x.jpg 3x`}
+                  src={`/images/${src}.jpg`}
+                  alt={`Slide ${idx}`}
+                  key={idx}
+                  className={`carousel-item item-${idx} active-${active}`}
+                  style={style}
+                />
+                <div className={`slide-overlay item-${idx} active-${active}`} style={style}></div>
+              </>
             )
           })}
       </div>
