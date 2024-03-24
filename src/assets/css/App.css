@@ -27,6 +27,7 @@ button {
   border: none;
   cursor: pointer;
   width: 50px;
+  height: 50px;
 }
 
 .cta {
@@ -142,10 +143,11 @@ button.lorem-button:hover > .arrow-icon {
     min-width: 380px;
     max-width: 380px;
     margin: 0 26px;
-    gap: 0;
+    gap: 25px;
   }
   #carousel {
     width: 360px;
+    margin-left: -40px;
   }
   .item-0,
   .item-1,
@@ -160,12 +162,14 @@ button.lorem-button:hover > .arrow-icon {
 }
 
 .slide-control {
-  margin: 25px 0;
+  box-sizing: border-box;
+  margin: 4px 0;
   font-size: 12px;
   font-weight: 700;
   line-height: 20px;
   text-align: right;
   opacity: 0.3;
+  color: #263640;
   transition: opacity 1s ease-out;
 }
 
