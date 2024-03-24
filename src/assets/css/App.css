@@ -143,7 +143,7 @@ button.lorem-button:hover > .arrow-icon {
     min-width: 380px;
     max-width: 380px;
     margin: 0 26px;
-    gap: 25px;
+    gap: 18px;
   }
   #carousel {
     width: 360px;
