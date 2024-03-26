@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 import CarouselControls from './CarouselControls'
 
 const Carousel = ({ items }) => {
@@ -23,17 +23,16 @@ const Carousel = ({ items }) => {
             const { src, width, height } = img
             const style = { width: `${width}px`, height: `${height}px` }
             return (
-              <>
+              <Fragment key={idx}>
                 <img
                   srcSet={`/images/${src}@2x.jpg 2x, /images/${src}@3x.jpg 3x`}
                   src={`/images/${src}.jpg`}
                   alt={`Slide ${idx}`}
-                  key={idx}
                   className={`carousel-item item-${idx} active-${active}`}
                   style={style}
                 />
                 <div className={`slide-overlay item-${idx} active-${active}`} style={style}></div>
-              </>
+              </Fragment>
             )
           })}
       </div>
